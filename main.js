@@ -1,17 +1,21 @@
-﻿$(function () {
+$(function () {
     if ($(window).innerWidth() < 600) {
         $('.header-container')
             .addClass('header-min');
     }
     // Likeitのクリック変化
     $('.liblary-img').hide();
+    $('.liblary-doc').hide();
     $('.liblary-img.active').show();
+    $('.liblary-doc.active').show();
     $('.like-it-list-item').click(function () {
 
         itemNo = $('.like-it-list-item').index(this);
 
         $('.liblary-img.active').hide().removeClass('active');
+        $('.liblary-doc.active').hide().removeClass('active');
         $('.liblary-img').eq(itemNo).show().addClass('active');
+        $('.liblary-doc').eq(itemNo).show().addClass('active');
 
     });
 
